@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="2072026 Budi Santoso">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <title>Soal 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 10%;
+            }
+
+            .display {
+                display: flex;
+            }
+
+            .circle {
+                border-radius: 50%;
+                height:50px;
+                width: 50px; 
+                margin-right: 20px;
+                cursor: pointer;
+                background-color: #ff0000;
+                border: 5px solid black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="display">
+        <div class="circle bg-info"></div>
+        <div class="circle bg-danger"></div>
+        <div class="circle bg-success"></div>
+        <div class="circle bg-warning"></div>
+    </div>
+    </body>
+    
+    <script>
+    var circle = document.querySelectorAll('.circle')
+    circle.forEach( (e, i) => {
+        
+        e.addEventListener('mouseenter', function(){
+            this.style.transform = 'translateY(150px)'
+            this.style.transition = 'all 1s ease'
+            this.style.opacity = '0.5'
+        })
+
+        e.addEventListener('mouseleave', function(){
+            this.style.transform = 'translateY(0)'
+            this.style.transition = 'all 1s ease'
+            this.style.opacity = '1'
+        })
+        
+    })
+    </script>
+</html>
